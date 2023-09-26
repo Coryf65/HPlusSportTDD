@@ -4,6 +4,9 @@ public record ShoppingCartManager
 {
     public AddToCartResponse AddToCart(AddToCartRequest request)
     {
-        throw new NotImplementedException();
+        return new AddToCartResponse()
+        {
+            Items = new[] { request.Item }
+        };
     }
 }
