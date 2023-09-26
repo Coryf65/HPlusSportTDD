@@ -1,6 +1,6 @@
 namespace HPlusSportTDD.Core.Tests;
 
-public record ShoppingCartManager
+public record ShoppingCartManager : IShoppingCartManager
 {
     private List<AddToCartItem> _shoppingCart;
 
@@ -23,5 +23,10 @@ public record ShoppingCartManager
         {
             Items = _shoppingCart.ToArray()
         };
+    }
+
+    public AddToCartItem[] GetCart()
+    {
+        return _shoppingCart.ToArray();
     }
 }

@@ -1,3 +1,5 @@
+using Moq;
+
 namespace HPlusSportTDD.Core.Tests;
 
 public class ShoppingCartTests
@@ -23,10 +25,19 @@ public class ShoppingCartTests
             Item = item
         };
 
-        var manager = new ShoppingCartManager();
+        // mocking the interface
+        var mockManager = new Mock<IShoppingCartManager>();
+        //var manager = new ShoppingCartManager();
+
+        mockManager.Setup(manager => manager.AddToCart(
+    It.IsAny<AddToCartRequest>())).Returns(
+            (AddToCartRequest request) => new AddToCartResponse()
+            {
+                Items = new AddToCartItem[] { request.Item }
+            });
         
         // Act
-        AddToCartResponse response = manager.AddToCart(request);
+        AddToCartResponse response = mockManager.Object.AddToCart(request);
         
         // Assert
         Assert.NotNull(response);
