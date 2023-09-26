@@ -11,7 +11,13 @@ public record ShoppingCartManager
     
     public AddToCartResponse AddToCart(AddToCartRequest request)
     {
-        _shoppingCart.Add(request.Item);
+        // search for an item existing to add to
+        var item = _shoppingCart.Find(i => i.ArticleId == request.Item.ArticleId);
+
+        if (item != null)
+            item.Quantity += request.Item.Quantity;
+        else
+            _shoppingCart.Add(request.Item);
         
         return new AddToCartResponse()
         {
