@@ -25,7 +25,7 @@ public record ShoppingCartManager : IShoppingCartManager
         };
     }
 
-    public AddToCartItem[] GetCart()
+    public IEnumerable<AddToCartItem> GetCart()
     {
         return _shoppingCart.ToArray();
     }

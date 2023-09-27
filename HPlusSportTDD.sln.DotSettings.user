@@ -4,5 +4,6 @@
     &lt;TestId&gt;NUnit3x::0D38DA08-F4AF-44AF-B390-C6DE562550DF::net7.0::HPlusSportTDD.Core.Tests.ShoppingCartTests.ShouldReturnArticleAddedToCart&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::0D38DA08-F4AF-44AF-B390-C6DE562550DF::net7.0::HPlusSportTDD.Core.Tests.ShoppingCartTests.ShouldReturnArticlesAddedToCart&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::0D38DA08-F4AF-44AF-B390-C6DE562550DF::net7.0::HPlusSportTDD.Core.Tests.ShoppingCartTests.ShouldAddQuantitiesToTotal&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::0D38DA08-F4AF-44AF-B390-C6DE562550DF::net7.0::HPlusSportTDD.Core.Tests.DBShoppingCartTests.ShouldReturnArticlesInCart&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
